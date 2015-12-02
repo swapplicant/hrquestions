@@ -1,0 +1,89 @@
+﻿<style>
+    table {
+        width: 100%;
+        text-align: center;
+    }
+    table th {
+        cursor: pointer;
+    }
+    table tr:nth-child(odd) {
+        background-color: #f1f1f1;    
+    }
+    .pagination {
+        width: 100%;
+        margin-top: 10px;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        background-color: #f1f1f1;
+    }
+
+    .pagination > div {
+        padding: 10px;
+        display: inline-block;
+    }
+    .pagination input {
+        width: 30px;
+    }
+</style>
+
+<!-- table of contents -->
+<table>
+    <!-- header -->
+    <tr>
+        <!--
+
+        Sorting by property:
+        - On first load by default the list should come sorted by 'createdDate' descending.
+        - Clicking the header title (text inside <th> element) should sort the list by the corresponding property.
+        - When the user clicks to sort an indicator (e.g. icon, img, word, etc) that indicates the sort order should appear on the right side of the header title.
+        - Clicking the header again should invert the sorting order for that property. The first click should order by the property in ascending order.
+        - The list can be sorted by a single property at a time.
+        - e.g.: list loads for the first time (no indicators displaying beside the table's headers's titles) -> user clicks the 'id' header ->
+        sort list by 'id' property -> show indicator beside the 'id' title indicating the ascending sort order -> user clicks the 'id' header again ->
+        sort list by 'id' in descending order -> show indicator beside the 'id' title indicating the descending sort order ->
+        user clicks on the 'task' header -> sort list only by 'task' property in ascending order ->
+        show indicator beside the 'task' title indicating the ascending sort order -> remove indicator from the 'id' header
+        - PS:
+            . the sort should happen for the whole list (i.e. not just sort the current page)
+            . sort should remain 'active' while navigating in between pages
+            . the indicators don't need to look pretty, they just have to be distinct (ascending from descending) and communicate well what they're doing
+
+        -->
+        <th>Id </th>
+        <th>Task </th>
+        <th>Created Date </th>
+    </tr>
+    <!-- body -->
+    <tr ng-repeat="todo in todos track by $index">
+        <td>{{todo.id}}</td>
+        <td>{{todo.task}}</td>
+        <td>{{todo.createdDate | date:'MM/dd/yyyy' }}</td>
+    </tr>
+</table>
+
+<!-- pagination component -->
+<!-- TODO: extract to a separate reusable directive (don't worry about style) -->
+<div class="pagination">
+    <div>
+        Items per page
+        <select> <!-- select how many items should be displayed per page -->
+            <option>10</option>
+            <option selected="selected">20</option> <!-- default option on first load should be 20 -->
+            <option>30</option>
+            <option>all</option> <!-- disregard pagination: show all the items -->
+        </select>
+    </div>
+    <div>
+        <button>&lt;&lt;</button> <!-- 'go to first page' button -->
+        <button>&lt;</button> <!-- 'go to previous page' button -->
+
+        Page <input type="number" value="1" min="1"/> <!-- input to select page to go to: go to page when input changes value --> of ??total page count here?? <!-- number of pages -->
+
+        <button>&gt;</button> <!-- 'go to next page' button -->
+        <button>&gt;&gt;</button> <!-- 'go to last page' button -->
+    </div>
+    <div>
+        <span>???total item count here??? items</span> <!-- total number of items -->
+    </div>
+
+</div>
