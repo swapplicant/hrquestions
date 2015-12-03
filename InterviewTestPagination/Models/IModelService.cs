@@ -9,9 +9,15 @@ namespace InterviewTestPagination.Models {
     /// <typeparam name="T"></typeparam>
     public interface IModelService<T> {
 
-        IModelRepository<T> Repository { get; }
+        /// <summary>
+        /// Reference to Repository layer
+        /// </summary>
+        IModelRepository<T> Repository { get; set; }
 
+        /// <summary>
+        /// Example signature of a method that lists entries of model T
+        /// </summary>
+        /// <returns></returns>
         IEnumerable<T> List(/* parameters */);
-
     }
 }

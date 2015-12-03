@@ -8,6 +8,10 @@ namespace InterviewTestPagination.Models {
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public interface IModelRepository<T> {
+        /// <summary>
+        /// Example of method signature: lists all entries of type T
+        /// </summary>
+        /// <returns></returns>
         IEnumerable<T> All();
     }
 }

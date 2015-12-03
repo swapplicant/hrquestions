@@ -1,34 +1,6 @@
-﻿<style>
-    table {
-        width: 100%;
-        text-align: center;
-    }
-    table th {
-        cursor: pointer;
-    }
-    table tr:nth-child(odd) {
-        background-color: #f1f1f1;    
-    }
-    .pagination {
-        width: 100%;
-        margin-top: 10px;
-        border-top: 1px solid black;
-        border-bottom: 1px solid black;
-        background-color: #f1f1f1;
-    }
-
-    .pagination > div {
-        padding: 10px;
-        display: inline-block;
-    }
-    .pagination input {
-        width: 30px;
-    }
-</style>
-
-<!-- table of contents -->
+﻿<!-- table of contents -->
 <table>
-    <!-- header -->
+    <!-- table:header -->
     <tr>
         <!--
 
@@ -53,7 +25,16 @@
         <th>Task </th>
         <th>Created Date </th>
     </tr>
-    <!-- body -->
+    
+    <!-- table:body -->
+    <!--
+
+    When the list is still loading (first load or any request made to server to fetch a page):
+    - A loading indicator should be displayed instead of the table body to indicate it
+    - It can be any kind of indicator (text, icon, img, etc). 
+    - Dont worry about styling (looking pretty, centralized, etc) it just has to show that the app is still active while the request is being made
+
+    -->
     <tr ng-repeat="todo in todos track by $index">
         <td>{{todo.id}}</td>
         <td>{{todo.task}}</td>
@@ -62,28 +43,4 @@
 </table>
 
 <!-- pagination component -->
-<!-- TODO: extract to a separate reusable directive (don't worry about style) -->
-<div class="pagination">
-    <div>
-        Items per page
-        <select> <!-- select how many items should be displayed per page -->
-            <option>10</option>
-            <option selected="selected">20</option> <!-- default option on first load should be 20 -->
-            <option>30</option>
-            <option>all</option> <!-- disregard pagination: show all the items -->
-        </select>
-    </div>
-    <div>
-        <button>&lt;&lt;</button> <!-- 'go to first page' button -->
-        <button>&lt;</button> <!-- 'go to previous page' button -->
-
-        Page <input type="number" value="1" min="1"/> <!-- input to select page to go to: go to page when input changes value --> of ??total page count here?? <!-- number of pages -->
-
-        <button>&gt;</button> <!-- 'go to next page' button -->
-        <button>&gt;&gt;</button> <!-- 'go to last page' button -->
-    </div>
-    <div>
-        <span>???total item count here??? items</span> <!-- total number of items -->
-    </div>
-
-</div>
+<pagination></pagination>

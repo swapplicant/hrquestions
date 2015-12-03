@@ -6,12 +6,17 @@ namespace InterviewTestPagination.Models.Todo {
     /// </summary>
     public class TodoService : IModelService<Todo> {
 
-        private readonly IModelRepository<Todo> _repository = new TodoRepository();
+        private IModelRepository<Todo> _repository = new TodoRepository();
 
         public IModelRepository<Todo> Repository {
             get { return _repository; }
+            set { _repository = value; }
         }
 
+        /// <summary>
+        /// Example implementation of List method: lists all entries of type <see cref="Todo"/>
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<Todo> List(/* parameters */) {
             // invoke Datasource layer
             return Repository.All();

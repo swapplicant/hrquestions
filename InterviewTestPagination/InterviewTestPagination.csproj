@@ -91,6 +91,8 @@
   <ItemGroup>
     <Content Include="app\app.module.js" />
     <Content Include="app\main.js" />
+    <Content Include="app\styles\styles.css" />
+    <Content Include="app\templates\pagination.html" />
     <Content Include="app\templates\todo.list.paginated.html" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
