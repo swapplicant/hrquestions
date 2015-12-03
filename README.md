@@ -19,7 +19,7 @@ The front-end application interacts with the back-end through `RESTful` requests
 
 ## Goal
 The goal of this test is to evaluate the following of the applicant's habilities:
-- api modeling: both the service contract between the front-end and back-end and between the back-end's components/services
+- api modeling: the contract between the front-end and back-end, contract between the back-end's components/services and client-side data-flow
 - overall knowledge about the chosen technology stack: mainly `AngularJS` and `.NET` and how they can be wired together to create a web application
 - troubleshooting: some bugs were purposely introduced to test the applicant's hability in finding their cause and removing them
 - basic knowledge of `git` and `github` (don't get stuck on the 'git part' of the exam; this is not mandatory knowledge; you can ask for help)
@@ -39,7 +39,7 @@ The applicant is supposed to model and implement a pagination feature for a list
 |   |
 │   ├───app # angular app folder
 │   │   │   app.module.js  ## angular app module definition
-│   │   │   main.js        ## angular app code
+│   │   │   main.js        ## angular app code (all components are here, feel free to modularize if you want)
 │   │   │
 │   │   ├───styles
 │   │   │       styles.css ## application's single stylesheet
@@ -69,6 +69,24 @@ The applicant is supposed to model and implement a pagination feature for a list
 ```
 The code should be documented enough so the applicants can know what they're supposed to do
 
+### Requirements
+- Front-end:
+  - create an angular pagination **reusable** component/directive
+    - choose number of items per page (10/20(default)/30/all)
+    - navigate to previous, next, first, last (buttons)
+    - navigate to an arbitrary page (number input)
+    - display current page number, number of pages and total number of items
+    - placeholders for the aforementioned elements and more detailed information can be found at `app/templates/pagination.html`
+  - modify the todo list component to use the pagination component correctly
+    - interacting with the pagination component need to change list page (e.g. choosing page 3 should fetch the todo items in that range, etc)
+    - allow sorting by object property when clicking the table headers
+      - go to first page but maintain selected page size
+      - toggle sorting order for subsequent clicks
+      - sort only a property at a time
+      - more information can be found at `app/templates/todo.list.paginated.html` 
+- Back-end:
+  - implement the api required (client-to-server contract, service-layer dtos, method signatures, etc) for the pagination to work
+
 ### Nothing is true. Everything is permitted
 The applicants are allowed to use third-party libraries, change the structure of the application, modify the entire codebase as they see fit and add external open-source tooling. Just beware of time restrictions. Feel free to use the internet for research as well.
 
@@ -88,3 +106,7 @@ The applicants are allowed to use third-party libraries, change the structure of
 - the reading of this document is not part of the exam time
 
 ---
+
+## Initial look
+*List was reduced to fit the picture*
+![Alt text](https://github.com/controltechnologysolutions/hrquestions/blob/master/initial_screenshot.png "List was reduced to fit the picture")
