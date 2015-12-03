@@ -78,6 +78,7 @@ The applicants are allowed to use third-party libraries, change the structure of
 - Client-side routing: not required to implement or use any native or thirdy party angular routing library. Navigation will be limited to the todo list
 - Security concepts: not required to encrypt, hash data. Don't worry about information leak. No need to implement authentication and authorization
 - Infrastructure and Protocols: there's no need to worry about any IT infrastructure, all the communication between client-side and server-side (and/or datasource) should be local. The only communication protocol being used is 'basic' http, there's no need to get creative with webscokects, SSE, messaging, etc
+- Cross-browser compatibility: the application has to work only in `Chrome`, don't worry about other browsers
 
 ### The practical part
 - The applicant will be given a fully configured machine with the proper tooling installed and configured for the exam
