@@ -128,7 +128,7 @@ The applicants are allowed to use third-party libraries, change the structure of
 
 ### High-level infrastructure diagram
 
-![Alt text](https://github.com/controltechnologysolutions/hrquestions/blob/master/assets/initial_screenshot.png "High-level infrastructure diagram")
+![Alt text](https://github.com/controltechnologysolutions/hrquestions/blob/master/assets/exam_infra_diagram.png "High-level infrastructure diagram")
 
 ---
 
