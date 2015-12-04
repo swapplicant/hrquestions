@@ -109,7 +109,7 @@ The applicants are allowed to use third-party libraries, change the structure of
 
 ## Initial look
 *List was reduced to fit the picture*
-![Alt text](https://github.com/controltechnologysolutions/hrquestions/blob/master/initial_screenshot.png "List was reduced to fit the picture")
+![Alt text](https://github.com/controltechnologysolutions/hrquestions/blob/master/assets/initial_screenshot.png "List was reduced to fit the picture")
 
 ---
 ---
@@ -128,7 +128,7 @@ The applicants are allowed to use third-party libraries, change the structure of
 
 ### High-level infrastructure diagram
 
-![Alt text]( !!!@lhrolim insert diagram's image's url here!!! )
+![Alt text](https://github.com/controltechnologysolutions/hrquestions/blob/master/assets/initial_screenshot.png "High-level infrastructure diagram")
 
 ---
 
