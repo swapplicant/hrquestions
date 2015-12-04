@@ -109,4 +109,42 @@ The applicants are allowed to use third-party libraries, change the structure of
 
 ## Initial look
 *List was reduced to fit the picture*
-![Alt text](https://github.com/controltechnologysolutions/hrquestions/blob/master/initial_screenshot.png "List was reduced to fit the picture")
+![Alt text](https://github.com/controltechnologysolutions/hrquestions/blob/master/assets/initial_screenshot.png "List was reduced to fit the picture")
+
+---
+---
+
+# Architeture Question: Offline asset management system
+
+## Overview
+- There's a fully operational online asset management system (web system: web browser communicating with web server application). This online system has a datasource
+- Management wants you to design an offline system that access the same datasource:
+	- the clients have limited timespam access to network connectivity
+	- in these moments the clients synchronize their work (the data changes they made, CRUD operations)
+	- the synchronization consists of downloading new data (recent changes to the datasource) and uploading their work (pushing changes to the datasource)
+	- potentially 2 clients might modify the same data while working in the offline application. Also any online modification could take place after the client had synched his data therefore some sort of conflict resolution strategy should take place
+	- the network bandwith is limitted therefore the amount of data transferred needs to be minimized at all times
+	- the offline consists of an app and a back-end application to handle the synchronization with the shared datasource
+
+### High-level infrastructure diagram
+
+![Alt text](https://github.com/controltechnologysolutions/hrquestions/blob/master/assets/initial_screenshot.png "High-level infrastructure diagram")
+
+---
+
+## Task
+Describe a high level architeture for the offline system described above.
+The architecture should spam both back-end and front-end parts of the system.
+Feel free to use any diagrams you think are necessary to explain the choosen architecture.
+If you choose any particular technology to compose a technology stack you should describe what the product does and why it is important that it is used in this scenario
+
+### Assume the following
+- Online system design is out of the scope (it is already fully functional and can't be modified)
+- The datasource is a SQL Database
+- The datasource is composed by a single table: 
+	- `Asset(id: long, data: string, rowstamp: timestamp)` 
+	- rowstamp value is updated automatically anytime an edit on the record happens
+- The only link between the online and offline systems is the datasource
+- First time the client accesses the offline app the data is downloaded 
+- You are free to use any technology stack you wish but you can't change the technologies already chosen for the data provider database or the online system
+- Performance and scalability are a main concern
