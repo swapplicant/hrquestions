@@ -147,5 +147,5 @@ If you choose any particular technology to compose a technology stack you should
 	- rowstamp value is updated automatically anytime an edit on the record happens
 - The only link between the online and offline systems is the datasource
 - First time the client accesses the offline app the data is downloaded 
-- You are free to use any technology stack you wish but you can't change the technologies already chosen for the data provider database or the online system
-- Performance and scalability are a main concern
+- You are free to use any technology stack you wish but you can't change the technologies already chosen for the datasource's RDBMS or the online system
+- Performance and scalability (growing number of clients) are a main concern
