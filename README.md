@@ -89,7 +89,7 @@ The code should be documented enough so the applicants can know what they're sup
 
 ### Nothing is true. Everything is permitted
 The applicants are allowed to use third-party libraries, change the structure of the application, modify the entire codebase as they see fit and add external open-source tooling. Just beware of time restrictions. Feel free to use the internet for research as well.
-*PS: copying and adapting proprietary code that is brough from home or former company you worked on is **NOT ALLOWED** because it misses the point of a hands-on exam and the habilities we are trying to assess plus we consider it unethical in an exam (try to work with the instructions provided and research)*
+*PS: copying and adapting proprietary code that is brough from home or former company you worked on is* **NOT ALLOWED** *because it misses the point of a hands-on exam and the habilities we are trying to assess plus we consider it unethical in an exam (try to work with the instructions provided and research)*
 
 ### What we are NOT testing
 - Design concepts: no styling, animations or 'making it look pretty' are necessary at all
