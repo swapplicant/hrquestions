@@ -18,10 +18,10 @@ The front-end application interacts with the back-end through `RESTful` requests
 ---
 
 ## Goal
-The goal of this test is to evaluate the following of the applicant's habilities:
+The goal of this test is to evaluate the following of the applicant's abilities:
 - api modeling: the contract between the front-end and back-end, contract between the back-end's components/services and client-side data-flow
 - overall knowledge about the chosen technology stack: mainly `AngularJS` and `.NET` and how they can be wired together to create a web application
-- troubleshooting: some bugs were purposely introduced to test the applicant's hability in finding their cause and removing them
+- troubleshooting: some bugs were purposely introduced to test the applicant's ability in finding their cause and removing them
 - basic knowledge of `git` and `github` (don't get stuck on the 'git part' of the exam; this is not mandatory knowledge; you can ask for help)
 
 ---
@@ -67,7 +67,7 @@ The applicant is supposed to model and implement a pagination feature for a list
 |
 ├───InterviewTestPagination.Tests
 ```
-The code should be documented enough so the applicants can know what they're supposed to do
+The code should be documented enough so that the applicants know what they're supposed to do
 
 ### Requirements
 - Front-end:
@@ -89,21 +89,21 @@ The code should be documented enough so the applicants can know what they're sup
 
 ### Nothing is true. Everything is permitted
 The applicants are allowed to use third-party libraries, change the structure of the application, modify the entire codebase as they see fit and add external open-source tooling. Just beware of time restrictions. Feel free to use the internet for research as well.
-*PS: copying and adapting proprietary code that is brough from home or former company you worked on is* **NOT ALLOWED** *because it misses the point of a hands-on exam and the habilities we are trying to assess plus we consider it unethical in an exam (try to work with the instructions provided and research)*
+*PS: copying and adapting proprietary code that is brought from home or from a former company you worked at is* **NOT ALLOWED** *because it misses the point of a hands-on exam and the abilities we are trying to assess, plus we consider it unethical in an exam (try to work with the instructions provided and research)*
 
 ### What we are NOT testing
 - Design concepts: no styling, animations or 'making it look pretty' are necessary at all
-- Performance tunning: not required to find the most performatic solution, minify and concatenate files, compress data flows, etc
+- Performance tunning: not required to find the most high performance solution, minify and concatenate files, compress data flows, etc
 - Client-side routing: not required to implement or use any native or thirdy party angular routing library. Navigation will be limited to the todo list
-- Security concepts: not required to encrypt, hash data. Don't worry about information leak. No need to implement authentication and authorization
-- Infrastructure and Protocols: there's no need to worry about any IT infrastructure, all the communication between client-side and server-side (and/or datasource) should be local. The only communication protocol being used is 'basic' http, there's no need to get creative with webscokects, SSE, messaging, etc
-- Cross-browser compatibility: the application has to work only in `Chrome`, don't worry about other browsers
+- Security concepts: not required to encrypt, or hash data. Don't worry about information leak. No need to implement authentication and authorization
+- Infrastructure and Protocols: there's no need to worry about any IT infrastructure, all the communication between client-side and server-side (and/or datasource) should be local. The only communication protocol being used is 'basic' http, there's no need to get creative with websockets, SSE, messaging, etc
+- Cross-browser compatibility: the application only has to work in `Chrome`, don't worry about other browsers
 
 ### The practical part
 - The applicant will be given a fully configured machine with the proper tooling installed and configured for the exam
 - Project will be already cloned in the machine, set to a applicant specific branch and imported on Visual Studio ready to deploy
-- **[IMPORTANT]** The expected time for finishing the question is 1.5 hours, but there´s actually no fixed time limit. The applicant is free to span some extra time on it if he wishes to. **Quality is what counts the most.**
-- **[IMPORTANT]** Once the applicant is finished he needs to **push his branch to github and open a Pull Request against the master branch. He should also include a plain txt file, or a comment on the commit, mentioning the amount of time taken to finish it (e.g: 1h30m, 1h08m, 44m etc...)**
+- **[IMPORTANT]** The expected time for finishing the question is 1.5 hours, but there´s actually no fixed time limit. The applicant is free to span some extra time on it if they wish to. **Quality is what counts the most.**
+- **[IMPORTANT]** Once the applicant is finished they need to **push their branch to github and open a Pull Request against the master branch. They should also include a plain txt file, or a comment on the commit, mentioning the amount of time taken to finish it (e.g: 1h30m, 1h08m, 44m etc...)**
 
 
 ---
@@ -115,7 +115,7 @@ The applicants are allowed to use third-party libraries, change the structure of
 ---
 ---
 
-# Architeture Question: Offline asset management system
+# Architecture Question: Offline asset management system
 
 ## Overview
 - There's a fully operational online asset management system (web system: web browser communicating with web server application). This online system has a datasource
@@ -123,8 +123,8 @@ The applicants are allowed to use third-party libraries, change the structure of
 	- the clients have limited timespam access to network connectivity
 	- in these moments the clients synchronize their work (the data changes they made, CRUD operations)
 	- the synchronization consists of downloading new data (recent changes to the datasource) and uploading their work (pushing changes to the datasource)
-	- potentially 2 clients might modify the same data while working in the offline application. Also any online modification could take place after the client had synched his data therefore some sort of conflict resolution strategy should take place
-	- the network bandwith is limitted therefore the amount of data transferred needs to be minimized at all times
+	- potentially 2 clients might modify the same data while working in the offline application. Also any online modification could take place after the client has synched their data therefore some sort of conflict resolution strategy should take place
+	- the network bandwidth is limited, therefore the amount of data transferred needs to be minimized at all times
 	- the offline consists of an app and a back-end application to handle the synchronization with the shared datasource
 
 ### High-level infrastructure diagram
@@ -134,8 +134,8 @@ The applicants are allowed to use third-party libraries, change the structure of
 ---
 
 ## Task
-Describe a high level architeture for the offline system described above.
-The architecture should spam both back-end and front-end parts of the system.
+Describe a high level architecture for the offline system described above.
+The architecture should span both back-end and front-end parts of the system.
 Feel free to use any diagrams you think are necessary to explain the choosen architecture.
 If you choose any particular technology to compose a technology stack you should describe what the product does and why it is important that it is used in this scenario
 
